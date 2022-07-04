@@ -25,7 +25,7 @@ Navigate to Settings > Integrations > Container registries
 ![alt text](https://github.com/ryoji-lacework/spring-petclinic/blob/main/images/inlinescanner.png?raw=true)
 
 Then you need to create two inputs as Github Secrets (secrets.LW_ACCOUNT_NAME and secrets.LW_ACCESS_TOKEN).
-*Notice that you provide Authorization Token you obtained the previous step as the LW_ACCESS_TOKEN value. 
+***Notice that you provide Authorization Token you obtained the previous step as the LW_ACCESS_TOKEN value. 
 
 In your GitHub repo, go into ```Settings``` -> ```Secrets``` -> ```Actions``` and create Repository Secrets as follows. They are encrypted by default.
 
