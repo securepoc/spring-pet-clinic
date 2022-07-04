@@ -20,7 +20,7 @@ This repo was forked from https://github.com/spring-projects/spring-petclinic an
 To start with, you need to provide two inputs as Github Secrets. 
 In your GitHub repo, go into ```Settings``` -> ```Secrets``` -> ```Actions``` and create Repository Secrets as follows. They are encrypted by default.
 
-
+![alt text](https://github.com/ryoji-lacework/spring-petclinic/blob/main/images/github-actions-secs.png?raw=true)
 
 
 ## Understanding the Spring Petclinic application with a few diagrams
