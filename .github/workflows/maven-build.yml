@@ -38,4 +38,4 @@ jobs:
           SCAN_LIBRARY_PACKAGES: true
           FAIL_BUILD: true
           SEVERITY_THRESHOLD: high
-          #USE_POLICY: false
+          USE_POLICY: false
