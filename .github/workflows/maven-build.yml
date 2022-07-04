@@ -27,7 +27,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: maven
-      - name: Build with Maven Wrapper (There is no Dockerfile in this project. You can build a container image (if you have a docker daemon) using the Spring Boot build plugin:)
+      - name: Build with Maven Wrapper (Build container image (if you have a docker daemon) using the Spring Boot build plugin)
         #run: ./mvnw -B package
         run: ./mvnw spring-boot:build-image
         
