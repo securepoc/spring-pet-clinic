@@ -10,6 +10,18 @@ There are many steps involved in building and deploying a containerized applicat
 Documentation
 https://support.lacework.com/hc/en-us/articles/1500001777821-Integrate-Remote-Scanner
 
+## Objectives
+
+This repo was forked from https://github.com/spring-projects/spring-petclinic and modified to demonstrate how easily you can scan container images as part of the build process. The Lacework inline scanner can be integrated with many CI systems such as Github Actions and Jenkins. This repo demonstrates how you cn integrate with the Lacework inline scanner with Github Actions. 
+
+
+## Prerequisites
+
+To start with, you need to provide two inputs as Github Secrets. 
+In your GitHub repo, go into ```Settings``` -> ```Secrets``` -> ```Actions``` and create Repository Secrets as follows. They are encrypted by default.
+
+
+
 
 ## Understanding the Spring Petclinic application with a few diagrams
 <a href="https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application">See the presentation here</a>
