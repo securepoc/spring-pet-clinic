@@ -27,7 +27,7 @@ jobs:
         run: ./mvnw spring-boot:build-image
         
       - name: Scan container images for vulnerabitilies using Lacework
-        uses: lacework/lw-scanner-action@v1.0.0
+        uses: lacework/lw-scanner-action@v0.7.1
         with:
           LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }} 
           LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
@@ -37,5 +37,5 @@ jobs:
           SAVE_RESULTS_IN_LACEWORK: true
           SCAN_LIBRARY_PACKAGES: true
           FAIL_BUILD: true
-          SEVERITY_THRESHOLD: high
-          USE_POLICY: false
+          #SEVERITY_THRESHOLD: high
+          #USE_POLICY: false
