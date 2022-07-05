@@ -22,6 +22,36 @@ In this tutorial, we are going to cover the followings.
 5. Validate the Lacework Inline Scanner Output
 6. Optional Settings (FAIL_BUILD, SEVERITY_THRESHOLD, USE_POLICY)
 
+## Intentionally Adding Vulnerable Packages
+To test Lacework Inline Scanning, the following Vulnerable Packages/Libraries have been added to the Spring Petclinic app. 
+
+- Spring4Shell 
+  - CVE-2022-22963
+- Log4j
+  - CVE-2021-45046
+
+
+```
+ <!-- Adding vuln lo4j packages -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.15.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.15.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-function-adapter-aws -->
+    <!-- adding more interesting vulm libraries-->
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-function-adapter-aws</artifactId>
+        <version>1.0.2.RELEASE</version>
+    </dependency>
+```
 
 ## Prerequisites
 
