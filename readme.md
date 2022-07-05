@@ -33,10 +33,13 @@ In your GitHub repo, go into ```Settings``` > ```Secrets``` > ```Actions``` and 
 
 ## Github Actions workflow 
 
-Modify and add the follwing inputs to your workflow file (spring-petclinic/.github/workflows/maven-build.yml). 
+Make the follwing changes in your workflow file (spring-petclinic/.github/workflows/maven-build.yml). 
 
+***Build container image using Maeen Wrapper ***
 ![alt text](https://github.com/ryoji-lacework/spring-petclinic/blob/main/images/build-image.png?raw=true)
+<a></a>
 
+***Add the following step (lw-scanner-action) to your GitHub Actions workflow ***
 ![alt text](https://github.com/ryoji-lacework/spring-petclinic/blob/main/images/lw-scanner-entry.png?raw=true)
 
 ## Understanding the Spring Petclinic application with a few diagrams
