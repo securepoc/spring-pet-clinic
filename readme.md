@@ -14,6 +14,14 @@ https://support.lacework.com/hc/en-us/articles/1500001777821-Integrate-Remote-Sc
 
 This repo was forked from https://github.com/spring-projects/spring-petclinic and modified to demonstrate how easily you can scan container images as part of the build process. The Lacework inline scanner can be integrated with many CI systems such as Github Actions and Jenkins. This repo demonstrates how you cn integrate with the Lacework inline scanner with Github Actions. 
 
+In this tutorial, we are going to cover the followings. 
+1. Create an Inline Scanner Integration in Lacework and obtain Authorization Token.
+2. Create GitHub Secrets.
+3. Make necessary changes to your GitHub Actions workflow file (spring-petclinic/.github/workflows/maven-build.yml). 
+4. Push a build 
+5. Validate the Lacework Inline Scanner Output
+6. Optional Settings (FAIL_BUILD, SEVERITY_THRESHOLD, USE_POLICY)
+
 
 ## Prerequisites
 
@@ -24,14 +32,14 @@ Navigate to ```Settings``` > ```Integrations``` > ```Container registries```
 
 ![alt text](https://github.com/ryoji-lacework/spring-petclinic/blob/main/images/inlinescanner.png?raw=true)
 
-Then you need to create two inputs as Github Secrets (secrets.LW_ACCOUNT_NAME and secrets.LW_ACCESS_TOKEN).
+Then you need to create two inputs as GitHub Secrets (secrets.LW_ACCOUNT_NAME and secrets.LW_ACCESS_TOKEN).
 ***Notice that you provide Authorization Token you obtained the previous step as the LW_ACCESS_TOKEN value.*** 
 
 In your GitHub repo, go into ```Settings``` > ```Secrets``` > ```Actions``` and create Repository Secrets as follows. They are encrypted by default.
 
 ![alt text](https://github.com/ryoji-lacework/spring-petclinic/blob/main/images/github-actions-secs.png?raw=true)
 
-## Github Actions workflow 
+## GitHub Actions workflow 
 
 Make the follwing changes in your workflow file (spring-petclinic/.github/workflows/maven-build.yml). 
 
@@ -41,6 +49,20 @@ Make the follwing changes in your workflow file (spring-petclinic/.github/workfl
 
 ***Add the following step (lw-scanner-action) to your GitHub Actions workflow***
 ![alt text](https://github.com/ryoji-lacework/spring-petclinic/blob/main/images/lw-scanner-entry.png?raw=true)
+
+
+## GitHub Actions Workflow
+Committing the workflow file to a branch in your repository triggers the push event and runs your workflow. 
+This allows Lacework to scan the newly built image in your CICD before being deployed. 
+![alt text](https://github.com/ryoji-lacework/spring-petclinic/blob/main/images/push.png?raw=true)
+
+## Inline Scanner Output 
+Lacework will scan OS and Library Packages for vulnerabilities.
+As shown below, Lacework will find some critical vulnerabilities (log4j and spring4shell)
+![alt text](https://github.com/ryoji-lacework/spring-petclinic/blob/main/images/build.png?raw=true)
+
+
+
 
 ## Understanding the Spring Petclinic application with a few diagrams
 <a href="https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application">See the presentation here</a>
