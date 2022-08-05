@@ -42,5 +42,5 @@ jobs:
           SAVE_RESULTS_IN_LACEWORK: true
           SCAN_LIBRARY_PACKAGES: true
           FAIL_BUILD: true
-          SEVERITY_THRESHOLD: high
+          #SEVERITY_THRESHOLD: high
           #USE_POLICY: false
