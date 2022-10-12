@@ -41,6 +41,6 @@ jobs:
           BUILD_REPORT_FILE_NAME: myreport.html
           SAVE_RESULTS_IN_LACEWORK: true
           SCAN_LIBRARY_PACKAGES: true
-          FAIL_BUILD: true
+          FAIL_BUILD: false
           SEVERITY_THRESHOLD: high
           USE_POLICY: false
