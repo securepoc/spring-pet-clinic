@@ -40,3 +40,6 @@ jobs:
           IMAGE_TAG: 2.7.0-SNAPSHOT
           BUILD_REPORT_FILE_NAME: myreport.html
           SAVE_RESULTS_IN_LACEWORK: true
+          SCAN_LIBRARY_PACKAGES: true
+          FAIL_BUILD: true
+          
