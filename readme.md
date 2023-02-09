@@ -3,7 +3,7 @@
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/spring-projects/spring-petclinic)
 
 
-## Lacework Vulnerability Scanner 
+## Lacework Vulnerability Scanner
 
 There are many steps involved in building and deploying a containerized application, a complete container image lifecycle approach is key to managing software supply chain risks. The Lacework inline remote scanner allows you to integrate Lacework security capabilities deeply into your software supply chain workflows by allowing you to scan and assess Docker container images for vulnerabilities without checking them into a container registry.
 
